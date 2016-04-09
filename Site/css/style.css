@@ -1,13 +1,17 @@
 body {
     background-color: #e7eff6;
-    font-family: Montserrat;
+    font-family: Sans-Serif;
 }
 
 .logo {
     width: 213px;
     height: 36px;
-    background: 'file://files/logo.jpg' no-repeat;
-    margin: 30px auto;
+    background-image: url('../files/logo.png'); 
+	background-size: cover;
+	 margin-left: auto;
+    margin-right: auto;
+	margin-top: 20vh;
+	margin-bottom:7vh;
 }
 
 .login-block {
@@ -23,7 +27,6 @@ body {
     text-align: center;
     color: #000;
     font-size: 18px;
-    text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -36,7 +39,7 @@ body {
     border: 1px solid #ccc;
     margin-bottom: 20px;
     font-size: 14px;
-    font-family: Montserrat;
+    font-family: Sans-Serif;
     padding: 0 20px 0 50px;
     outline: none;
 }
@@ -74,9 +77,8 @@ body {
     border: 1px solid #2a4d69;
     color: #fff;
     font-weight: bold;
-    text-transform: uppercase;
     font-size: 14px;
-    font-family: Montserrat;
+    font-family: Sans-Serif;
     outline: none;
     cursor: pointer;
 }
