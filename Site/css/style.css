@@ -1,17 +1,86 @@
-body{
-	background-color: gray;
+body {
+    background-color: #e7eff6;
+    font-family: Montserrat;
 }
 
-#Title{
-	margin: 30vh auto 15px;
-	text-align: center;
+.logo {
+    width: 213px;
+    height: 36px;
+    background: 'file://files/logo.jpg' no-repeat;
+    margin: 30px auto;
 }
 
-#Main button{
-	
-	margin-left: 5vw;
+.login-block {
+    width: 420px;
+    padding: 20px;
+    background: #adcbe3;
+    border-radius: 5px;
+    border-top: 5px solid #2a4d69;
+    margin: 0 auto;
 }
 
-#Main #Client{
-	margin-left:  30vw;
+.login-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.login-block input#username {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#username:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid #2a4d69;
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: #2a4d69;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #2a4d69;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-block button:hover {
+    background: #4b86b4;
 }
