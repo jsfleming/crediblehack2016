@@ -1,0 +1,17 @@
+body{
+	background-color: gray;
+}
+
+#Title{
+	margin: 30vh auto 15px;
+	text-align: center;
+}
+
+#Main button{
+	
+	margin-left: 5vw;
+}
+
+#Main #Client{
+	margin-left:  30vw;
+}
