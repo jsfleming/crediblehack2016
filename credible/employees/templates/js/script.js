@@ -104,12 +104,14 @@ $(document).ready(function()
 			});
 
 			//Create a list
-			var numOfClients = 15;
+			var numOfClients = "{{employee_numOfSched}}";
+			var numOfClients = 3;
+
 			var str = "<ul id='clist'>";
 
 			for (var i = 0; i < numOfClients; i++){
 				str += "<li class='cNum' id ='" + i + "'>";
-				str += (i+1) + ". <b>data</b>";
+				str += (i+1) + ". {{client_name}}"; //Append 
 				str += "</li>";
 			}
 
@@ -125,8 +127,12 @@ $(document).ready(function()
 					$(selector).remove();
 				}else{
 					var str = "<div class='cDesc'>";
-					str += "<br>---------------------------------";
-					str += "---------------------------------</div>"
+					str += "---------------------------------";
+					str += "<br>Date of Birth: {{client_dob}}"
+					str += "<br>Address: {{client_address}}, {{client_city}}, {{client_state}}";
+					str += "<br>Home Phone: {{client_hPhone}}";
+					str += "<br>Email: {{client_email}}";
+					str += "<br>---------------------------------</div>"
 					$("#" + cId).append(str);
 				}
 				
