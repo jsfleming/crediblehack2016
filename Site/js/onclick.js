@@ -9,7 +9,7 @@ function clickButton() {
 			if (data.LoginStatus != 1) {
 				alert("Invalid Username and/or Password")
 			} else {
-				var myCookie = "ID=" + data.EmployeeId + "; expires=0; path=/; domain=C:\\"
+				var myCookie = "ID=" + data.EmployeeId + "; expires=0; path=/"
 				console.log(myCookie)
 				document.cookie = myCookie;
 				console.log("myCookie: " + document.cookie)
