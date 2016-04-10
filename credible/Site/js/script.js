@@ -111,8 +111,15 @@ $(document).ready(function()
 			var str = "<ul id='clist'>";
 
 			for (var i = 0; i < numOfClients; i++){
-				str += (i+1) + ". " + query_data[i][clientId]; //Append 
+				name = "";
+				if (i == 0) {
+					name = "Brenton Akane"
+				} else {
+					name = "Frank Roma"
+				}
+
 				str += "<li class='cNum' id ='" + i + "'>";
+				str += (i+1) + ". " + name; //Append 
 				str += "</li>";
 			}
 
@@ -121,18 +128,34 @@ $(document).ready(function()
 			$(".ClientList").append(str);
 
 			$(".cNum").click(function(e){
+				console.log("asdlkfjasdl");
 				var cId = $(this).attr("id");
 
 				if ($("#" + cId).text().indexOf("---------------------------------") > -1){
 					var selector = "#" + cId + " .cDesc";
 					$(selector).remove();
 				}else{
+					dob = ""
+					address = ""
+					city = ""
+					state = ""
+					if (cId == 0) {
+						dob = "2000-12-12T00:00:00"
+						address = "6315 5th St NW"
+						city = "Washington"
+						state = "DC"
+					} else {
+						dob = "1960-04-04T00:00:00"
+						address = "13501 Richter Farm Rd"
+						city = "Germantown"
+						state = "MD"
+					}
 					var str = "<div class='cDesc'>";
 					str += "---------------------------------";
-					str += "<br>Date of Birth: {{client_dob}}"
-					str += "<br>Address: {{client_address}}, {{client_city}}, {{client_state}}";
-					str += "<br>Home Phone: {{client_hPhone}}";
-					str += "<br>Email: {{client_email}}";
+					str += "<br>Date of Birth: " + dob
+					str += "<br>Address: "+ address +", "+ city +", " + state;
+					str += "<br>Home Phone: ";
+					str += "<br>Email: ";
 					str += "<br>---------------------------------</div>"
 					$("#" + cId).append(str);
 				}
