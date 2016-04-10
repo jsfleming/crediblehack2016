@@ -45,41 +45,12 @@ $(document).ready(function()
 	
 	$("#goToSchedule").click(function()
 		{
-			if(!isSchedulePage)
-			{
-				isSchedulePage = true;
-				isMainPage = false;
-				isProfilePage = false;
-
-				$("#schedulePage").attr("class", "currentPage");
-				$("#mainPage").removeClass("currentPage");
-				$("#profilePage").removeClass("currentPage");
-
-				$("#map").fadeOut(500);
-				$("#main").fadeOut(500, function()
-				{
-					$("#schedule").fadeIn(500);
-				});
-			}
+			openSchedule();
 		});
 
 	$("#goToProfile").click(function()
 		{
-			if(!isProfilePage){
-				isProfilePage = true;
-				isSchedulePage = false;
-				isMainPage = false;
-
-				$("#profilePage").attr("class", "currentPage");
-				$("#mainPage").removeClass("currentPage");
-				$("#schedulePage").removeClass("currentPage");
-
-				$("#schedule").fadeOut(500);
-				$("#main").fadeOut(500, function()
-				{
-					$("#profile").fadeIn(500);
-				});
-			}
+			openProfile();
 		});
 
 	$("#mainPage").click(function()
@@ -101,53 +72,81 @@ $(document).ready(function()
 
 			}
 		});
-	
-	$("#profilePage").click(function()
-		{
-			if(!isProfilePage)
-			{
-				isProfilePage = true;
-				isSchedulePage = false;
-				isMainPage = false;
-
-				$("#profilePage").attr("class", "currentPage");
-				$("#mainPage").removeClass("currentPage");
-				$("#schedulePage").removeClass("currentPage");
-
-				$("#schedule").fadeOut(500);
-				$("#main").fadeOut(500, function()
-				{
-					$("#profile").fadeIn(500);
-				});
-			}
-		});
 
 	$("#schedulePage").click(function()
 		{
-			if(!isSchedulePage)
-			{
-				isSchedulePage = true;
-				isMainPage = false;
-				isProfilePage = false;
-
-				$("#schedulePage").attr("class", "currentPage");
-				$("#mainPage").removeClass("currentPage");
-				$("#profilePage").removeClass("currentPage");
-
-				$("#map").fadeOut(500);
-				$("#main").fadeOut(500, function()
-				{
-					$("#schedule").fadeIn(500);
-				});
-			}
+			openSchedule();
 		});
 	
+	$("#profilePage").click(function()
+		{
+			openProfile();
+		});
+
+
+
+	function openSchedule(){
+		
+		if(!isSchedulePage)
+		{
+			isSchedulePage = true;
+			isMainPage = false;
+			isProfilePage = false;
+
+			$("#schedulePage").attr("class", "currentPage");
+			$("#mainPage").removeClass("currentPage");
+			$("#profilePage").removeClass("currentPage");
+
+			$("#profile").fadeOut(500);
+			$("#main").fadeOut(500, function()
+			{
+				$("#schedule").fadeIn(500);
+			});
+
+			//Create a list
+			var numOfClients = 15;
+			var str = "<ul id='clist'>";
+
+			for (var i = 0; i < numOfClients; i++){
+				str += "<li class='cNum' id ='" + i + "'>";
+				str += (i+1) + ". data";
+				str += "</li>";
+			}
+
+			str += "</ul>"
+
+			$(".ClientList").append(str);
+
+			$(".cNum").click(function(e){
+				alert($(this).attr('id'));
+			});
+		}	
+	}
+
+	function openProfile(){
+		if(!isProfilePage){
+			isProfilePage = true;
+			isSchedulePage = false;
+			isMainPage = false;
+
+			$("#profilePage").attr("class", "currentPage");
+			$("#mainPage").removeClass("currentPage");
+			$("#schedulePage").removeClass("currentPage");
+
+			$("#schedule").fadeOut(500);
+			$("#main").fadeOut(500, function()
+			{
+				$("#profile").fadeIn(500);
+			});
+		}
+	}
+
 
 	// Make Work page current page
 	$("#mainPage").attr("class", "currentPage");
 	
 	// Hide Schedule page
-	$("#map").fadeOut(0);
+	$("#profile").fadeOut(0);
 
 	// Hide Schedule page
 	$("#schedule").fadeOut(0);

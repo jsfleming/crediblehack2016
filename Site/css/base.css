@@ -1309,6 +1309,10 @@ footer p {
 	padding-top: 8px;
 }
 
+.sixteen.columns{
+	white-space: hidden;
+	overflow-x:hidden;
+}
 #footerLinks li {
 	font-weight: bold;
 	font-size: 12px;
@@ -1317,6 +1321,9 @@ footer p {
 	margin-left: 0;
 	border-right: 1px solid;
 	padding-right: 15px;
+	white-space: nowrap;
+	overflow-x:hidden;
+
 }
 
 #footerLinks li:first-child {
