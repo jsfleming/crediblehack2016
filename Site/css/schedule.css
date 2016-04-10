@@ -10,17 +10,23 @@
 
 .ClientInfo{
 	display: inline-block;
-	
 	margin-left: 20px;
 	overflow-x:hidden;
 	
 }
 .ClientList{
     height:410px;
-    width:215px;
+    width: 345px;
     /* background-color:#CCC; */        
     overflow-y:scroll;
     float:right;
     vertical-align:top;
 }
 
+.cNum {
+	font-weight: bold;
+}
+
+.cDesc{
+	font-weight: normal;
+}
