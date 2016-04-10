@@ -1,8 +1,9 @@
 jQuery.easing.def = "easeOutQuad";
 
+query_data = {};
+
 $(document).ready(function()
 {
-	
 	// Make enlarge buttons inactive if no onClick event
 	$(".enlargeButton").each(function() {
         if ( $(this).attr("onClick") == undefined )  {
@@ -105,13 +106,13 @@ $(document).ready(function()
 
 			//Create a list
 			var numOfClients = "{{employee_numOfSched}}";
-			var numOfClients = 3;
+			var numOfClients = 2;
 
 			var str = "<ul id='clist'>";
 
 			for (var i = 0; i < numOfClients; i++){
+				str += (i+1) + ". " + query_data[i][clientId]; //Append 
 				str += "<li class='cNum' id ='" + i + "'>";
-				str += (i+1) + ". {{client_name}}"; //Append 
 				str += "</li>";
 			}
 
