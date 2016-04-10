@@ -13,7 +13,7 @@ function clickButton() {
 				console.log(myCookie)
 				document.cookie = myCookie;
 				console.log("myCookie: " + document.cookie)
-				document.location.href = "main.html"
+				document.location.href = "template-main.html"
 			}
 		},
 		"json")
