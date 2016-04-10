@@ -1,5 +1,5 @@
 body {
-    background-color: #e7eff6;
+    background-color: #ededed;
     font-family: Sans-Serif;
 }
 
@@ -17,15 +17,15 @@ body {
 .login-block {
     width: 420px;
     padding: 20px;
-    background: #adcbe3;
+    background: #A1D7BD;
     border-radius: 5px;
-    border-top: 5px solid #2a4d69;
+    border-top: 5px solid #0AB775;
     margin: 0 auto;
 }
 
 .login-block h1 {
     text-align: center;
-    color: #000;
+    color: #006400;
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 20px;
@@ -65,16 +65,16 @@ body {
 }
 
 .login-block input:active, .login-block input:focus {
-    border: 1px solid #2a4d69;
+    border: 1px solid #0AB775;
 }
 
 .login-block button {
     width: 100%;
     height: 40px;
-    background: #2a4d69;
+    background: #0AB775;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 1px solid #2a4d69;
+    border: 1px solid #0AB775;
     color: #fff;
     font-weight: bold;
     font-size: 14px;
@@ -84,5 +84,5 @@ body {
 }
 
 .login-block button:hover {
-    background: #4b86b4;
+    background: #009900;
 }
