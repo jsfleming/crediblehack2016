@@ -1,0 +1,136 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+<title>Flow~</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================================================================= -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/themes/type_05.css">
+<link rel="stylesheet" href="css/themes/color_06.css">
+<link rel="stylesheet" href="css/schedule.css">
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<!-- JS
+================================================================================================= -->
+<script src="js/libs/modernizr.min.js"></script>
+<script src="js/libs/jquery-1.8.3.min.js"></script>
+<script src="js/libs/jquery.easing.1.3.min.js"></script>
+<script src="js/libs/jquery.fitvids.js"></script>
+<script src="js/script.js"></script>
+
+</head>
+<body>
+
+<!-- Write preloader to page - this allows the site to load for users with JS disabled -->
+<script type="text/javascript">
+	document.write("<div id='sitePreloader'><div id='preloaderImage'><img src='images/site_preloader.gif' alt='Preloader' /></div></div>");
+</script>
+
+<div class="container">
+	
+	<!-- Header begins ========================================================================== -->
+	<header class="sixteen columns">
+		<div id="logo">
+			<!--Set to employee-->
+			<h1>Employee Name</h1>
+			<h2>Set to date</h2>
+		</div>
+		<nav>
+			<ul>
+				<li><button id="mainPage">Main</button></li>
+				<li><button id="schedulePage">Schedule</button></li>
+				<li><button id="profilePage">Profile</button></li>
+				
+			</ul>
+		</nav>
+		<hr />
+	</header>
+	<!-- Header ends ============================================================================ -->
+	
+	<!-- Work page begins ======================================================================= -->
+	<div id="main">
+		<div id="overview" class="sixteen columns">
+			<h3>Welcome.</h3>
+			<hr />
+		</div>
+		
+		<div class="eight columns" id="col1">
+			<!-- Project begins ================================================================= -->
+			<div class="project">
+				
+				<div class="projectThumbnail" id="goToSchedule">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>Schedule</h4>
+						<h5>View Today's Work Flow</h5>
+					</div>
+					
+					<img src="images/clock.jpeg" alt="Project 01" class="thumbnailImage" />
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		<div class="eight columns" id="col2">
+			<div class="project" id="goToProfile">
+				<div class="projectThumbnail">
+					<svg class="thumbnailMask"></svg>
+					<div class="projectThumbnailHover">
+						<h4>Profile</h4>
+						<h5>Edit Personal</h5>
+					</div>
+					<img src="images/portfolio.jpg" alt="Project 02" class="thumbnailImage" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Schedule page ends ======================================================================== -->
+	<div id="schedule">
+		<span class="scheduleContent">
+			<iframe 
+				class="gmap"
+	  			width="600"
+	 		 	height="450"
+	  			frameborder="0" style="border:0"
+	  			src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAd1Q67XiaiBREcNWNff5o7RgeptKSXJ4o&origin=38.9915435,-76.9383452&destination=1700+East+Capitol+St+NE,Washington,DC&waypoints=4301+13th+St+NW,Washington,DC" allowfullscreen>
+			</iframe>
+			<div class="ClientInfo">
+				<h3>Client List</h3>
+				<div class="ClientList"></div>
+			</div>
+		</span>
+	</div>
+
+	<div id="profile">
+		
+	</div>
+	
+	
+	<!-- Footer begins ========================================================================== -->
+	<footer class="sixteen columns">
+		<hr />
+		<ul id="footerLinks">
+			<li>Thank you caffeine ♥ Team Flow #Bitcamp2016</li>
+			<li>Josh Fleming</li>
+			<li>Terry Kim</li>
+			<li>Victor Chang</li>
+			<li>Yotam Yaniv</li>
+		</ul>
+	</footer>
+	<!-- Footer ends ============================================================================ -->
+		
+</div><!-- container -->
+</body>
+</html>
