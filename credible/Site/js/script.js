@@ -61,6 +61,8 @@ $(document).ready(function()
 				isMainPage = true;
 				isProfilePage = false;
 				isSchedulePage = false;
+
+				$("#clist").remove();
 				$("#mainPage").attr("class", "currentPage");
 				$("#profilePage").removeClass("currentPage");
 				$("#schedulePage").removeClass("currentPage");
@@ -172,6 +174,7 @@ $(document).ready(function()
 			isSchedulePage = false;
 			isMainPage = false;
 
+			$("#clist").remove();
 			$("#profilePage").attr("class", "currentPage");
 			$("#mainPage").removeClass("currentPage");
 			$("#schedulePage").removeClass("currentPage");
