@@ -56,7 +56,7 @@ ROOT_URLCONF = 'credible.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['~/Documents/Programming/Hackathons/Bitcamp/2016/crediblehack2016/credible/Site'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
