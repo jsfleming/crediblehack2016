@@ -4,35 +4,35 @@
         "pk": 1,
 
         "fields": {
-            "AddressLine1": null,
+            "AddressLine1": 3715 Macomb St NW,
             "AddressLine2": null,
-            "City": null,
+            "City": Washington,
             "EmergencyPhone": null,
             "EmployeeId": 3935,
             "EmployeeImage": null,
             "Name": "Larry David",
             "OfficePhone": null,
-            "State": null,
+            "State": DC,
             "Title": null,
-            "Zip": null
+            "Zip": 20016
         }
     },
     {   
         "model": "employees.profile",
-        "pk": 12,
+        "pk": 2,
 
         "fields": {
-            "AddressLine1": null,
+            "AddressLine1": 3630 Garfield St NW,
             "AddressLine2": null,
-            "City": null,
+            "City": Washington,
             "EmergencyPhone": null,
             "EmployeeId": 3936,
             "EmployeeImage": null,
             "Name": "Jim Henson",
             "OfficePhone": null,
-            "State": null,
+            "State": DC,
             "Title": null,
-            "Zip": null
+            "Zip":  20007
         }
     },
     {
@@ -40,17 +40,17 @@
         "pk": 3,
 
         "fields": {
-            "AddressLine1": null,
+            "AddressLine1": 3820 Yuma St NW,
             "AddressLine2": null,
-            "City": null,
+            "City": Washington,
             "EmergencyPhone": null,
             "EmployeeId": 3937,
             "EmployeeImage": null,
             "Name": "Sergey Brin",
             "OfficePhone": null,
-            "State": null,
+            "State": DC,
             "Title": null,
-            "Zip": null
+            "Zip": 20007
         }
     },
     {
@@ -58,17 +58,17 @@
         "pk": 4,
 
         "fields": {
-            "AddressLine1": null,
+            "AddressLine1":4726 36th St NW,
             "AddressLine2": null,
-            "City": null,
+            "City": Washington,
             "EmergencyPhone": null,
             "EmployeeId": 3938,
             "EmployeeImage": null,
             "Name": "Connie Chung",
             "OfficePhone": null,
-            "State": null,
+            "State": DC,
             "Title": null,
-            "Zip": null
+            "Zip": 20008
         }
     },
     {   
@@ -76,17 +76,17 @@
         "pk": 5,
 
         "fields": {
-            "AddressLine1": null,
+            "AddressLine1": 12000 Hitching Post Lane,
             "AddressLine2": null,
-            "City": null,
+            "City": Rockville,
             "EmergencyPhone": null,
             "EmployeeId": 3939,
             "EmployeeImage": null,
             "Name": "Gayle King",
             "OfficePhone": null,
-            "State": null,
+            "State": MD,
             "Title": null,
-            "Zip": null
+            "Zip": 20852
         }
     }
 ]
