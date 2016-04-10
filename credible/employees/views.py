@@ -10,7 +10,7 @@ from .models import Profile
 
 def index(request):
 #    employee_address_list = Profile.objects.get(pk=1)
-    template = loader.get_template('main.html')
+    template = loader.get_template('template-main.html')
 
 
     data = json.dumps({'a': 234234})
