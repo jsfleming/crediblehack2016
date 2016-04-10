@@ -4,16 +4,15 @@ from django.db import models
 
 # Create your models here.
 # field types: NullBooleanField, CharField(null=True, max_length),
-# IntegerField(null=True, default), DateField
+# IntegerField(null=True, default), DateTimeField
 
 class Profile(models.Model):
-    
     clientId = models.IntegerField(null=True)
     externalId = models.IntegerField(null=True)
     firstName = models.CharField(null=True, max_length=200)
     lastName = models.CharField(null=True, max_length=200)
     middleInitial = models.CharField(null=True, max_length=1)
-    dateOfBirth = models.DateField(null=True)
+    dateOfBirth = models.DateTimeField(null=True)
     address1 = models.CharField(null=True, max_length=200)
     address2 = models.CharField(null=True, max_length=200)
     city = models.CharField(null=True, max_length=200)
@@ -30,7 +29,7 @@ class Profile(models.Model):
     company = models.CharField(null=True, max_length=200)
     residenceType = models.CharField(null=True, max_length=200)
     status = models.CharField(null=True, max_length=200)
-    statusDate = models.DateField(null=True)
+    statusDate = models.DateTimeField(null=True)
     homePhone = models.CharField(null=True, max_length=200)
     emergencyPhone = models.CharField(null=True, max_length=200)
     emergencyContact = models.CharField(null=True, max_length=200)
@@ -44,15 +43,15 @@ class Profile(models.Model):
     referredNPI = models.CharField(null=True, max_length=200)
     referredUPIN = models.CharField(null=True, max_length=200)
     referredSource = models.CharField(null=True, max_length=200)
-    firstSVCDate = models.DateField(null=True)
-    firstBillSVCDate = models.DateField(null=True)
-    lastSVCDate = models.DateField(null=True)
-    lastBillSVCDate = models.DateField(null=True)
-    referralDate = models.DateField(null=True)
-    assessmentDate = models.DateField(null=True)
-    intakeDate = models.DateField(null=True)
-    admissionDate = models.DateField(null=True)
-    dischargeDate = models.DateField(null=True)
+    firstSVCDate = models.DateTimeField(null=True)
+    firstBillSVCDate = models.DateTimeField(null=True)
+    lastSVCDate = models.DateTimeField(null=True)
+    lastBillSVCDate = models.DateTimeField(null=True)
+    referralDate = models.DateTimeField(null=True)
+    assessmentDate = models.DateTimeField(null=True)
+    intakeDate = models.DateTimeField(null=True)
+    admissionDate = models.DateTimeField(null=True)
+    dischargeDate = models.DateTimeField(null=True)
     reportingUnit = models.CharField(null=True, max_length=200)
     assignedBenefits = models.CharField(null=True, max_length=200)
     releaseInformation = models.CharField(null=True, max_length=200)
@@ -77,9 +76,10 @@ class Profile(models.Model):
     raceDescription = models.CharField(null=True, max_length=200)
     ethnicityDescription = models.CharField(null=True, max_length=200)
     state = models.CharField(null=True, max_length=200)
-    date = models.DateField(null=True)
+    date = models.DateTimeField(null=True)
 
 class Allergies(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
     clientAllergyId = models.IntegerField(null=True)
     clientId = models.IntegerField(null=True)
     allergyName = models.CharField(null=True, max_length=200)
@@ -98,14 +98,15 @@ class Allergies(models.Model):
     source = models.CharField(null=True, max_length=200)
     rxNormId = models.IntegerField(null=True)
     isReconciledCDA = models.NullBooleanField()
-    dateCreated = models.DateField(null=True)
-    dateUpdated = models.DateField(null=True)
+    dateCreated = models.DateTimeField(null=True)
+    dateUpdated = models.DateTimeField(null=True)
     state = models.CharField(null=True, max_length=200)
-    date = models.DateField(null=True)
+    date = models.DateTimeField(null=True)
 
 
 
 class Contacts(models.Model):
+    allergies = models.ForeignKey(Allergies, on_delete=models.CASCADE, null=True)
     clientContactId = models.IntegerField(null=True)
     clientId = models.IntegerField(null=True)
     contactTypeId = models.IntegerField(null=True)
@@ -124,21 +125,22 @@ class Contacts(models.Model):
     clientVisitId = models.IntegerField(null=True)
     visitMapGroup = models.CharField(null=True, max_length=200)
     isAbleToReleaseInformation = models.NullBooleanField()
-    dateReleasedInfoExpires = models.DateField(null=True)
+    dateReleasedInfoExpires = models.DateTimeField(null=True)
     updatedByEmployeeId = models.IntegerField(null=True)
-    dateReleasedInfoStarts = models.DateField(null=True)
+    dateReleasedInfoStarts = models.DateTimeField(null=True)
     notes = models.CharField(null=True, max_length=200)
     address2 = models.CharField(null=True, max_length=200)
     agencyId = models.IntegerField(null=True)
     agencyName = models.CharField(null=True, max_length=200)
     source = models.CharField(null=True, max_length=200)
-    dateCreated = models.DateField(null=True)
-    dateUpdated = models.DateField(null=True)
+    dateCreated = models.DateTimeField(null=True)
+    dateUpdated = models.DateTimeField(null=True)
     state = models.CharField(null=True, max_length=200)
     date = models.CharField(null=True, max_length=200)
 
 
 class Medications(models.Model):
+    Contacts = models.ForeignKey(Contacts, on_delete=models.CASCADE, null=True)
     medicationId = models.IntegerField(null=True)
     clientId = models.IntegerField(null=True)
     providerId = models.IntegerField(null=True)
@@ -148,9 +150,9 @@ class Medications(models.Model):
     medication = models.CharField(null=True, max_length=200)
     dosage = models.CharField(null=True, max_length=200)
     frequency = models.CharField(null=True, max_length=200)
-    dateStarted = models.DateField(null=True)
-    dateChanged = models.DateField(null=True)
-    dateDiscontinued = models.DateField(null=True)
+    dateStarted = models.DateTimeField(null=True)
+    dateChanged = models.DateTimeField(null=True)
+    dateDiscontinued = models.DateTimeField(null=True)
     externalId = models.IntegerField(null=True)
     rationale = models.CharField(null=True, max_length=200)
     isCurrent = models.NullBooleanField()
@@ -204,10 +206,10 @@ class Medications(models.Model):
     rxNormClassCode = models.CharField(null=True, max_length=200)
     providerName = models.CharField(null=True, max_length=200)
     dosageDescription = models.CharField(null=True, max_length=200)
-    dateCreated = models.DateField(null=True)
-    dateUpdated = models.DateField(null=True)
+    dateCreated = models.DateTimeField(null=True)
+    dateUpdated = models.DateTimeField(null=True)
     state = models.CharField(null=True, max_length=200)
-    date = models.DateField(null=True)
+    date = models.DateTimeField(null=True)
 
 
 # class Diagnoses(models.Model):

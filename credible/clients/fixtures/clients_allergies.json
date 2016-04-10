@@ -1,0 +1,90 @@
+[
+    {
+        "model": "clients.allergies",
+        "pk": 1,
+
+        "fields": {
+            "isDiscontinued": false,
+            "isMedAllergy": false,
+            "severity": "6736007",
+            "dateDiscontinued": null,
+            "discontinuedReason": null,
+            "source": null,
+            "state": "New",
+            "discontinuedByEmployeeId": null,
+            "updatedByEmployeeId": null,
+            "dateCreated": "2015-03-23T13:18:41.28",
+            "isReconciledCDA": null,
+            "createdByEmployeeId": 3898,
+            "date": "2015-03-23T13:18:41.28",
+            "rxNormId": null,
+            "dateUpdated": null,
+            "reaction": "Hives",
+            "fdbConceptId": 568.0,
+            "additionalText": "",
+            "clientId": 1002,
+            "clientAllergyId": 2,
+            "fdbConceptTypeId": 6.0,
+            "allergyName": "peanut"
+        }
+    },
+
+    {
+        "model": "clients.allergies",
+        "pk": 2,
+
+        "fields": {
+            "isDiscontinued": false,
+            "isMedAllergy": false,
+            "severity": "399166001",
+            "dateDiscontinued": null,
+            "discontinuedReason": null,
+            "source": null,
+            "state": "New",
+            "discontinuedByEmployeeId": null,
+            "updatedByEmployeeId": null,
+            "dateCreated": "2016-04-08T14:27:44.143",
+            "isReconciledCDA": null,
+            "createdByEmployeeId": 3898,
+            "date": "2016-04-08T14:27:44.143",
+            "rxNormId": 891658,
+            "dateUpdated": null,
+            "reaction": "Anaphylaxis",
+            "fdbConceptId": 568.0,
+            "additionalText": "",
+            "clientId": 1005,
+            "clientAllergyId": 3,
+            "fdbConceptTypeId": 6.0,
+            "allergyName": "peanut"
+        }
+    },
+    {
+        "model": "clients.allergies",
+        "pk": 3,
+
+        "fields": {
+                "isDiscontinued": false,
+                "isMedAllergy": false,
+                "severity": "371923003",
+                "dateDiscontinued": null,
+                "discontinuedReason": null,
+                "source": null,
+                "state": "New",
+                "discontinuedByEmployeeId": null,
+                "updatedByEmployeeId": null,
+                "dateCreated": "2016-04-08T14:28:00.3",
+                "isReconciledCDA": null,
+                "createdByEmployeeId": 3898,
+                "date": "2016-04-08T14:28:00.3",
+                "rxNormId": 7986,
+                "dateUpdated": null,
+                "reaction": "Rash",
+                "fdbConceptId": 476.0,
+                "additionalText": "",
+                "clientId": 1005,
+                "clientAllergyId": 4,
+                "fdbConceptTypeId": 1.0,
+                "allergyName": "Penicillins"
+        }
+    }
+]
