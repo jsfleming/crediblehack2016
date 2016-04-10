@@ -109,7 +109,7 @@ $(document).ready(function()
 
 			for (var i = 0; i < numOfClients; i++){
 				str += "<li class='cNum' id ='" + i + "'>";
-				str += (i+1) + ". data";
+				str += (i+1) + ". <b>data</b>";
 				str += "</li>";
 			}
 
@@ -118,8 +118,21 @@ $(document).ready(function()
 			$(".ClientList").append(str);
 
 			$(".cNum").click(function(e){
-				alert($(this).attr('id'));
+				var cId = $(this).attr("id");
+
+				if ($("#" + cId).text().indexOf("---------------------------------") > -1){
+					var selector = "#" + cId + " .cDesc";
+					$(selector).remove();
+				}else{
+					var str = "<div class='cDesc'>";
+					str += "<br>---------------------------------";
+					str += "---------------------------------</div>"
+					$("#" + cId).append(str);
+				}
+				
 			});
+
+		
 		}	
 	}
 
@@ -166,9 +179,9 @@ $(window).load(function() {
 	$(".container").delay(700).fadeIn(500);
 });
 
-// Portfolio slider setup
-jQuery(document).ready(function($) {
-	var sliderProps = {
+	// Portfolio slider setup
+	jQuery(document).ready(function($) {
+		var sliderProps = {
 		autoScaleSlider: true,
 	   	autoScaleSliderWidth: 460,
 	   	autoScaleSliderHeight: 284,
@@ -191,20 +204,5 @@ jQuery(document).ready(function($) {
 		}
 	}
 
-	$(".projectThumbnail").click(function(e) {
-		
-	});
-	
-	$(".closeButton, #schedulePage, #logo").click(function() {
-		
-		// Add a delay to fix weird issue with resizing About page
-		function closeSlider() {
-			closeOpenedProject(currOpenProject.find(".thumbnailImage"));
-			currOpenProject.find(".projectThumbnailHover").css("visibility", "visible");
-		}
-		//setTimeout(closeSlider, 400);
-		setTimeout(closeSlider, 1);
-		
-	});
 	
 });
